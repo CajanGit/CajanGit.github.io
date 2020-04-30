@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8"
-    <title>Ethan's Website</title>
+    <title style= "color:White">Ethan's Website</title>
   </head>
   <body style="background-color:Red">
       <h1 style="color:#2d3436">Hi and welcome.</h1>
@@ -10,5 +10,12 @@
   </body>
 <p>id="timer">Timer</p>
 var timer = select('#timer');
+timer.html('0');
+function timeIt() {
+counter++;
+timer.html(counter);
+}
+setInterval(timeIt, 1000);
+
 timer.html('this is where the timer will go')
 </html>
