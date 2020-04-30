@@ -8,4 +8,21 @@
       <h1 style="color:#2d3436">Welcome to Epic Code.</h1>
         <p style="color:#2d3436">Check it out.</p>
   </body>
+#include "SimpleTimer.h"
+
+SimpleTimer::SimpleTimer(uint64_t interval) : _interval(interval) {
+    _start = millis();
+}
+
+bool SimpleTimer::isReady() {
+    return _start + _interval <= millis();
+}
+
+void SimpleTimer::setInterval(uint64_t interval) {
+    _interval = interval;
+}
+
+void SimpleTimer::reset() {
+    _start = millis();
+}
 </html>
