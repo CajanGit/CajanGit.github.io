@@ -3,15 +3,11 @@
 <body>
 <h4> test <h4>
 <body>
-var span = document.getElementById('span');
-
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours();
-  span.textContent = h + ":" + m + ":" + s;
+window.onload = displayClock();
+function displayClock(){
+  var display = new Date().toLocaleTimeString();
+  document.body.innerHTML = display;
+  setTimeout(displayClock, 1000); 
 }
-setInterval(time, 1000);
 </html>
 <!--https://stackoverflow.com/questions/39418405/making-a-live-clock-in-javascript-->
